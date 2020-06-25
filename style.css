@@ -1,0 +1,651 @@
+*,
+::after,
+::before{
+    box-sizing:border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 16px;
+    font-family: Montserrat, sans-serif, Helvetica;
+}
+
+nav{
+    display:flex;
+    position:fixed;
+    width:100%;
+    min-height: 17vh;
+    background-color:#1C242C;
+    align-items:center; 
+    justify-content:space-around; 
+}
+
+h1{
+    font-size:40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+p{
+    font-size: 24px;
+    color:  #1C242C;
+}
+
+img{
+    max-width: 100%;
+}
+
+button{
+    background-color:transparent;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a:focus{
+    outline:none;
+}
+
+.logo{
+    color:white;
+}
+.logo1{
+    display:block;
+}
+
+.logo2{
+    display:none;
+}
+
+.fa{
+    font-size:30px;
+    color:rgb(226, 226, 226);
+    margin:2.5rem 1rem;
+    text-align: center;
+}
+
+/*
+**************************************************************************
+Styling the MENU and BURGER, making them responsive
+**************************************************************************
+*/
+.menu, .mobile-menu {
+    display:flex;
+    width:30%;
+    justify-content:space-around;
+}
+
+.menu li, .mobile-menu li{
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left:1rem;
+    color:rgb(177, 177, 177);
+}
+
+.menu a, .mobile-menu a{
+   color: rgb(177, 177, 177);
+}
+
+.menu a:hover, .mobile-menu a:hover {
+    color:white;  
+}
+
+.mobile-menu{
+    display:none;
+}
+
+.burger{
+    display:none;
+    animation: burger 3s linear infinite alternate;
+}
+
+.burger div{
+    width: 2.2rem;
+    height:0.25rem;
+    margin:  0.25rem;
+    background-color:white;
+    transition: 0.3s ease;
+}
+
+@keyframes burger {
+    0%{
+        transform: scale(1)
+    }
+    50%{
+        transform:scale(1.2)
+    }
+    100%{
+        transform: scale(1)
+    }
+}
+
+/*
+**************************************************************************
+Styling the HERO BANNER and the introductory information and making them responsive
+**************************************************************************
+*/
+
+.hero-banner{
+    height: 100vh;
+    position:relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/Kencom-House-Nairobi-cbd.jpg);
+    max-width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+.profile-picture::after{
+    content:"";
+    height:11.5rem;
+    width: 11.5rem;
+    margin:0.25rem;
+    position:absolute;
+    background-image: url(./images/Kevin-erick-owuor-majengo.jpg);
+    background-size: cover;    
+    border-radius: 50%;
+}
+
+.profile-picture{
+    height:12rem;
+    width: 12rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    background-color:white;
+    transform: translateX(-50%)
+}
+
+.greeting{
+    font-family: Sacramento, cursive;
+    font-size: 45px;
+    margin-top: 1rem;
+    color:white;
+}
+
+.title{
+    color:white; 
+    margin-bottom:1rem;
+    font-size: 23px;
+}
+
+.profile-information{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    position: absolute;
+    top: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+**************************************************************************
+Styling the DOWNLOAD RESUME buttons and making them responsive
+**************************************************************************
+*/
+.resume{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color:  rgb(236, 236, 236);
+}
+
+#resume-button{
+    padding: 1rem 2.5rem;
+    margin:1rem 0rem 0rem 0rem;
+    border-radius: 25px;
+    border: 2px solid white;
+    font-size: 23px;
+    color:white;
+    transition-duration: 0.4s;
+}
+
+#resume-button:hover{
+    border: 2px solid green;
+    background:green;
+    color:white;
+}
+
+#resume-button2{
+    padding: 1.5rem 3rem;
+    margin-bottom:2rem;
+    border-radius: 25px;
+    border-style: none;
+    font-size: 24px;
+    background-color: rgba(0, 128, 0, 0.6);
+    transition-duration: 0.4s;  
+}
+
+#resume-button2:hover{
+    background-color: green;
+}
+
+/*
+**************************************************************************
+Styling the LIVE DEMO BUTTONS and making them responsive
+**************************************************************************
+*/
+
+.live-demo-button{
+    padding:0.5rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 25px;
+    border: 2px solid green;
+    color:green;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+.live-demo-button:hover{
+    background-color: green;
+    color:white;
+    border: 2px solid green
+}
+
+/*
+**************************************************************************
+Styling the various SECTION headings and paragraphs
+**************************************************************************
+*/
+
+.projects{
+    background-color: rgb(236, 236, 236);
+}
+
+.project-title{
+    color:green;
+    font-weight: bold;
+}
+
+.section-heading{
+    font-size: 2.5rem;
+    padding-top: 17vh;
+    text-align: center;
+    color: #1C242C;
+}
+
+.underline{
+    height:0.25rem;
+    width:3rem;
+    margin: 1rem auto;
+    background-color:  #1C242C;
+}
+
+.project-paragraph{
+    padding:2rem 5rem;
+    text-align: center;
+}
+
+
+/*
+**************************************************************************
+Styling the ABOUT ME SECTION making the icons responsive
+**************************************************************************
+*/
+
+.about{
+    height: auto;
+    background-color: white;
+}
+
+.about-fa{
+    font-size: 5rem;
+    color: green;
+}
+
+.about-paragraph{
+    font-size: 15px;
+    margin: 0rem 1rem;
+    font-weight: bold;
+    color:green;
+}
+
+.about-fa-container{
+    display:flex; 
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-fa-container div{
+    display:flex; 
+    width:25%;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/*
+**************************************************************************
+Styling the PROJECTS SECTION making the featured project snippets responsive
+**************************************************************************
+*/
+
+.project-container{
+    display:flex;
+    padding:0rem 5rem;
+    justify-content: space-between;
+    height: auto;
+    flex-wrap: nowrap;
+}
+
+.featured-projects{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    background-color: white;
+    height:auto;
+    border-radius: 5%;
+    overflow: hidden; 
+    width:100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 2px solid green;
+}
+
+.featured-projects-paragraph{
+    font-size: 15px;
+    margin: 1rem 2rem;
+}
+
+
+/*
+**************************************************************************
+Styling the SKILL SECTION logo container and making the logos responsive
+**************************************************************************
+*/
+
+.skills{
+    background-color: white;
+}
+
+.language-logos-container{
+    display:flex; 
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.language-logos-container div{
+    display:flex; 
+    width:25%;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.language-logo{
+    height:100px;
+    margin: 2rem;
+}
+
+/*
+**************************************************************************
+Styling the CONTACT SECTION and making the FOOTER responsive
+**************************************************************************
+*/
+
+.contact-me{
+    height: auto;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1c242c;
+}
+
+.email{
+    height:5vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 35%;
+    margin: auto;
+    margin: 3rem;
+}
+
+.footer-paragraph1{
+    font-size: 15px;
+    color:rgb(226, 226, 226);
+    margin: 1rem;
+}
+
+.footer-paragraph2{
+    font-size: 15px;
+    color:rgb(226, 226, 226);
+    margin: 2rem;
+}
+
+.social-media{
+    color: rgb(177, 177, 177);
+}
+
+.social-media:hover{
+    color:white;  
+}
+
+/*
+**************************************************************************
+MEDIA QUERY for a MAXiMUM WIDTH of 992px
+**************************************************************************
+*/
+
+@media screen and (max-width:992px){
+
+    body{
+        overflow-x:hidden;
+    }
+    nav{
+        min-height: 14vh;
+    }
+    .logo1{
+        display:none;
+    }
+
+    .logo2{
+        display:block
+    }
+
+    .menu{
+        display:none;
+    }
+    .mobile-menu{
+        display:block;
+        z-index: 100;
+        position:absolute;
+        top:14vh;
+        right:0px;
+        transform:translateX(-200%);
+        height:86vh;
+        background-color:rgba(28, 36, 44, 0.9);
+        width:50%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        transition: transform 0.45s ease-in-out;   
+    }
+
+    h1{
+        font-size:20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    
+    p{
+        font-size: 20px;
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .featured-projects-paragraph{
+        font-size: 15px;
+    }
+
+    .live-demo-button{
+        font-size: 15px;
+    }
+
+    .footer-paragraph{
+        font-size: 15px;
+    }
+
+    .burger{
+        display:block;
+    }
+
+    .skills{
+        height: auto;
+    }
+
+    .project-container{
+        flex-wrap: wrap;
+    }
+
+    .about-fa-container div{
+        width:50%;
+    }
+
+    .email{
+        width: 60%;
+    }
+
+    .language-logos-container div{
+        display:flex; 
+        width:50%; 
+    }
+
+}
+
+/*
+**************************************************************************
+JAVASCRIPT TOGGLE CLASSES & KEYFRAMES
+**************************************************************************
+*/
+
+
+.nav-active{
+    transform:translateX(-100%);
+}
+.transform-burger .line1{
+    transform:rotate(-45deg) translate(-5px,5px);
+}
+.transform-burger .line2{
+    opacity:0;
+}
+.transform-burger .line3{
+    transform:rotate(45deg) translate(-5px,-5px);
+}
+
+@keyframes links-animation{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+
+/*
+**************************************************************************
+MEDIA QUERY for a MAXiMUM WIDTH of 600px
+**************************************************************************
+*/
+
+@media screen and (max-width:600px){
+
+    .hero-banner{
+        background-size: stretch;
+    }
+
+    /*nav{
+        padding:0rem 1rem;
+    }*/
+
+    .project-paragraph{
+        padding:1rem;
+    }
+
+    .burger{
+        display:block;
+    }
+
+    .about-fa-container div{
+        width:100%;
+    }
+    
+    .project-container{
+        flex-wrap: wrap;
+        padding:0rem;
+    }
+
+    .featured-projects{
+        margin: 1rem;
+        /*height:80vh;*/
+    }
+
+    .language-logo{
+        height:10vh;
+    }
+
+    #resume-button2{
+        padding: 1rem 2rem;       
+        margin:1rem 0rem 2rem;
+    }
+    
+}
+
+/*
+**************************************************************************
+MEDIA QUERY for a MAXiMUM WIDTH of 320px
+**************************************************************************
+*/
+
+@media screen and (max-width:320px){
+
+    p{
+        font-size: 17px;
+    }
+
+    .footer-paragraph{
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+
+
+ 
+
